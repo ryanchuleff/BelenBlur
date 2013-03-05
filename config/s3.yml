@@ -1,0 +1,11 @@
+development:
+  access_key_id: AKIAJFKY2S2HRAGN6XDA
+  secret_access_key: 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
+
+test:
+  access_key_id: AKIAJFKY2S2HRAGN6XDA
+  secret_access_key: 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
+
+production:
+  access_key_id: AKIAJFKY2S2HRAGN6XDA
+  secret_access_key: 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

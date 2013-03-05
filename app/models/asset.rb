@@ -20,7 +20,7 @@ class Asset < ActiveRecord::Base
 
 	attr_accessible :asset
 
-	has_attached_file :asset, 
+	has_attached_file :asset, :bucket => "planttogether_public_beta", 
 										:styles => {:blur10 => "400x400#", :blur9 => "400x400#", :blur8 => "400x400#", :blur7 => "400x400#", :blur6 => "400x400#",
 																:blur5 => "400x400#", :blur4 => "400x400#", :blur3 => "400x400#", :blur2 => "400x400#", :blur1 => "400x400#",
 																:blur0 => "400x400#"},

@@ -32,6 +32,7 @@ class AssetsController < ApplicationController
   end
 
   def create
+    Asset.delete_all
     @asset = Asset.new(params[:asset])
 
     respond_to do |format|
