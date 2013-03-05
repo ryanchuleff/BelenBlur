@@ -1,6 +1,6 @@
-class CreatePhotos < ActiveRecord::Migration
+class CreateClickers < ActiveRecord::Migration
   def change
-    create_table :photos do |t|
+    create_table :clickers do |t|
       t.string :address
       t.integer :clicks
 

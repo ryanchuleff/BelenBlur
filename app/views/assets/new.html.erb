@@ -1,0 +1,7 @@
+	<%= semantic_form_for Asset.new, :html => {:multipart => true} do |f| %>
+
+	    <%= f.input :asset, :label => "Blur Photo" %>
+
+	  <%= f.action :submit, :label => "Add Photo" %>
+
+	<% end %>

@@ -18,16 +18,16 @@
 
 class Asset < ActiveRecord::Base
 
-  # Encrypt and obfuscate the Query String Params
-  def to_param
-    Hideous.hide(self.id).parameterize
-  end
+	attr_accessible :asset
 
-  belongs_to :assetable, :polymorphic => true
-
-  def url(*args)
-  	asset.url(*args)
-  end
+	has_attached_file :asset, 
+										:styles => {:blur10 => "400x400#", :blur9 => "400x400#", :blur8 => "400x400#", :blur7 => "400x400#", :blur6 => "400x400#",
+																:blur5 => "400x400#", :blur4 => "400x400#", :blur3 => "400x400#", :blur2 => "400x400#", :blur1 => "400x400#",
+																:blur0 => "400x400#"},
+										:convert_options => {:blur10 => "-blur 0x100", :blur9 => "-blur 0x85", :blur8 => "-blur 0x72", :blur7 => "-blur 0x60", 
+																				:blur6 => "-blur 0x50", :blur5 => "-blur 0x40", :blur4 => "-blur 0x30", :blur3 => "-blur 0x20", 
+																				:blur2 => "-blur 0x10", :blur1 => "-blur 0x5"}
+ 
 
   def name
   	asset_file_name

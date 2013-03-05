@@ -1,0 +1,5 @@
+<div id="blurble">
+<%= link_to (image_tag @asset.asset.url(Clicker.get_image(@asset))), [@asset, Clicker.new], :remote => true, :method => :post %>
+</div>
+Your IP: <%= @ip %>
+<%= link_to "Reset Test", @asset, :method => :put %>
